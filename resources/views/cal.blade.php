@@ -799,42 +799,42 @@
         </div>
         <br>
         <br>
-        <form style="color: #718096" action="{{  }}" method="post">
+        <form style="color: #718096" action="" method="post">
+            @csrf
             <div class="mb-3">
                 <label for="num1" class="form-label">num1</label>
-                <input type="number" class="form-control" id="num1" aria-describedby="emailHelp">
+                <input type="number" class="form-control" id="num1" name="num1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
                 <label for="num2" class="form-label">num2</label>
-                <input type="number" class="form-control" id="num2">
+                <input type="number" class="form-control" name="num2" id="num2">
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="symbol" id="+">
+                <input class="form-check-input" type="radio" name="symbol" id="+" value="+" >
                 <label class="form-check-label" for="+">
                     Plus
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="symbol" id="*">
+                <input class="form-check-input" type="radio" name="symbol" id="*" value="*">
                 <label class="form-check-label" for="*">
                     Multiplication
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="symbol" id="-">
+                <input class="form-check-input" type="radio" name="symbol" id="-" value="-">
                 <label class="form-check-label" for="-">
                     Minus
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="symbol" id="/">
+                <input class="form-check-input" type="radio" name="symbol" id="/" value="/">
                 <label class="form-check-label" for="/">
                     Division
                 </label>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-        @dd()
     </div>
 </div>
 </body>
