@@ -1,3 +1,15 @@
+@if(!isset($sum))
+    @php($sum = 0)
+@endif
+@if(!isset($num1))
+    @php($num1 = 0)
+@endif
+@if(!isset($num2))
+    @php($num2 = 0)
+@endif
+@if(!isset($symbol))
+    @php($symbol = ',')
+@endif
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -789,6 +801,9 @@
 <div
     class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
     <div class="max-w-7xl mx-auto p-6 lg:p-8">
+
+        <center style="color: #718096; font-size: 50px"><b>{{$num1}} {{$symbol}} {{$num2}} = {{$sum}}</b></center>
+
         <div class="flex justify-center">
             <svg viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg"
                  class="h-16 w-auto bg-gray-100 dark:bg-gray-900">
@@ -804,10 +819,6 @@
             <div class="mb-3">
                 <label for="num1" class="form-label">num1</label>
                 <input type="number" class="form-control" id="num1" name="num1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="num2" class="form-label">num2</label>
-                <input type="number" class="form-control" name="num2" id="num2">
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="symbol" id="+" value="+" >
@@ -832,6 +843,10 @@
                 <label class="form-check-label" for="/">
                     Division
                 </label>
+            </div>
+            <div class="mb-3">
+                <label for="num2" class="form-label">num2</label>
+                <input type="number" class="form-control" name="num2" id="num2">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

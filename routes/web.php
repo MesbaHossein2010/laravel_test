@@ -23,7 +23,7 @@ Route::resource('/ResourceTest', TestController::class);
 
 Route::get('/cal', [CalController::class, 'index']);
 
-Route::post('/cal', [CalController::class, 'Add']);
+Route::post('/cal', [CalController::class, 'calculate']);
 
 
 
