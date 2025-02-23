@@ -26,7 +26,6 @@ Route::get('/cal', [CalController::class, 'index']);
 Route::post('/cal', [CalController::class, 'calculate']);
 
 
-
 Route::fallback(function () {
-    return "<center style='font-size: 200px; color: red' >No domain like this <b style='color: #000000' >dummy</b></center>";
+    return view('fallback');
 });
